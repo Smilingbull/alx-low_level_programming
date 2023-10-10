@@ -1,36 +1,24 @@
-#ifndef DOG_H
-#define DOG_H
-
+#ifndef _DOG_H_
+#define _DOG_H_
 /**
- * dog_t - Typedef for struct dog
-/*
- * File: dog.h
- * Desc: header file section.
+ * struct dog - a struct that create a dog info
+ *
+ * @name: the name of the dog
+ * @age: the age of the dog
+ * @owner: the owner of the dog
+ *
+ * Description: first struct with alx
  */
-typedef struct dog dog_t;
 
-/**
- * struct dog - structure for dogs
- * @name: first member
- * @age: second member
- * @owner: third member
- * struct dog - A new type describing a dog.
- * @name: defines the name of the dog.
- * @age: defines the age of the dog.
- * @owner: specifies the owner of the dog.
- */
-struct dog
+typedef struct dog
 {
-@@ -19,6 +19,11 @@ struct dog
-        char *owner;
-};
-
-/**
- * dog_t - Typedef for struct dog
- */
-typedef struct dog dog_t;
+	char *name;
+	float age;
+	char *owner;
+} dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
-
+void free_dog(dog_t *d);
+#endif

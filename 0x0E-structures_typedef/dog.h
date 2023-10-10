@@ -22,7 +22,7 @@ typedef struct dog dog_t;
 struct dog
 {
 @@ -19,6 +19,11 @@ struct dog
-	char *owner;
+        char *owner;
 };
 
 /**
